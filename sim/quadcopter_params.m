@@ -1,6 +1,7 @@
 %% Quadcopter params.
 % Gravitational force
-G = [0 ; 0; -9.81];
+g= 9.81;
+G = [0 ; 0; -g];
 
 % Interia matrix
 Ixx = 2.32 * 1e-3;
@@ -18,6 +19,7 @@ m = 0.5;
 kF = 6.11 * 1e-8;
 kM = 1.5 * 1e-9;
 gamma = kM/kF;
+wi_max = 16000;
 
 % Input gain matrix
 M = [1 1 1 1; 0 L 0 -L; L 0 -L 0; gamma -gamma gamma -gamma];
